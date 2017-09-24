@@ -1,4 +1,4 @@
-var url='https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&generator=search&pilimit=max&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrnamespace=0&gsrlimit=10&gsrsearch=';
+var url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&generator=search&pilimit=max&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrnamespace=0&gsrlimit=10&gsrsearch=';
 const pageIDurl = 'https://en.wikipedia.org/?curid=';
 const lookFor = document.querySelector('input[type=text]');
 const cb = '&callback=JSON_CALLBACK'
