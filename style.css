@@ -1,0 +1,77 @@
+a{
+  color:white;
+}
+
+body {
+  background-color:#4286f4;
+
+}
+.centralbox{
+  margin: auto;
+  width: 50%;
+  padding-top:220px;
+  font-size:15px;
+  transition:0.7s;
+  text-align:center;
+}
+
+p{
+  color:white;
+}
+.textField{
+  color:white;
+  width:35px;
+  height:35px;
+  margin-top:5px;
+  margin-bottom:10px;
+  background:#4286f4;
+  background-image:url(http://www.clker.com/cliparts/v/C/2/9/I/6/search-icon-white-hi.png);
+  background-size:25px 25px;
+  background-position:6px 5px;
+  background-repeat:no-repeat;
+  padding-left:25px;
+  border:none;
+  transition:0.7s;
+}
+.afterFocus{
+  width:200px;
+  height:25px;
+  outline-width:0;
+  border-radius:15px;
+  border:solid 1px white;
+  background-size:15px 15px;
+}
+
+.sendButton{
+  font-size:20px;
+  height:25px;
+  background:#4286f4;
+  color:white;
+  border:none;
+  padding: 1px;
+}
+
+.generatedBlocks{
+  padding:7px;
+  margin-bottom:5px;
+  margin
+  width:700px;
+  border:solid 1px white;
+}
+.generatedBlocks:hover{
+  padding-left:3px;
+  padding-right:3px;
+  border-left:solid 5px orange;
+  border-right:solid 5px orange;
+}
+.generatedContent{
+  text-align:left;
+}
+h1{
+  color:white;
+  text-align:left;
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+}
