@@ -1,23 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
+    <title>Wikipedia Browser App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <script src="https://use.fontawesome.com/9d01cb4e5a.js"></script>
     <link rel=stylesheet type="text/css" href="style.css">
   </head>
   <body>
     <div class="centralbox" id="centralID">
       <div class="monsterHead">
-        <div class="monsterEye"><span id="ball1" class="eyeballs">•</span></div>
-        <div class="monsterEye"><span id="ball2" class="eyeballs">•</span></div>
+        <div class="monsterEye"><svg class="eyeballs" height="10" width="10">
+  <circle cx="5" cy="5" r="5" fill="black" />
+</svg></div>
+        <div class="monsterEye"><svg class="eyeballs" height="10" width="10">
+  <circle cx="5" cy="5" r="5" fill="black" />
+</svg></div>
       </div>
       <p>This is your Wikipedia Search toolbox!</p>
       <form id="myForm">
         <input class="textField" type="text" id="searchCont" name="search" autocomplete="off">
-        <svg class="invisible" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="#fff" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/></svg>
+        <svg class="invisible" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="#fff" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/></svg>
         <div class="errorMsg"> No possible results found! Try something else ... </div>
       </form>
       <p>Or just <a href=https://en.wikipedia.org/wiki/Special:Random>Feel Lucky</a></p>
-      <div id="generatedContent">
+      <div class="generatedContent">
       </div>
     </div>
     <script type="text/javascript" src="javascript/script.js"></script>

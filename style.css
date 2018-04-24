@@ -19,7 +19,6 @@ h1 {
 }
 
 p {
-	font-size: 20px;
 	font-family: "Roboto Condensed", sans-serif;
 	color: white;
 }
@@ -30,15 +29,6 @@ form {
 	justify-content: center;
 	height: 50px;
 	position: relative;
-}
-
-svg {
-	position: absolute;
-	border: none;
-	right: 50%;
-	transition: 0.7s;
-	visibility: hidden;
-	opacity: 0;
 }
 
 .monsterHead {
@@ -56,32 +46,22 @@ svg {
 }
 
 .monsterEye {
-	text-align: center;
-	position: relative;
-	width: 30px;
-	height: 30px;
-	border: 5px solid #fff;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
-	color: #000;
-	font-size: 30px;
 	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-#ball1 {
-	position: absolute;
-	left: 10px;
-	transition: 0.2s;
-}
-
-#ball2 {
-	position: absolute;
-	left: 10px;
+.eyeballs {
 	transition: 0.2s;
 }
 
 .centralbox {
 	margin: 200px auto;
-	width: 50%;
+	width: 75%;
 	font-size: 15px;
 	transition: 0.7s;
 	text-align: center;
@@ -97,9 +77,18 @@ svg {
 	background-size: 25px 25px;
 	background-position: 6px 5px;
 	background-repeat: no-repeat;
-	padding-left: 25px;
 	border: none;
 	transition: 0.7s;
+	cursor: pointer;
+}
+
+.invisible {
+	position: absolute;
+	border: none;
+	right: 50%;
+	transition: 0.4s;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .afterFocus {
@@ -110,10 +99,11 @@ svg {
 	border: solid 1px white;
 	background-size: 15px 15px;
 	border-right: none;
+	padding-left: 25px;
 }
 
 .generatedBlocks {
-	width: 40%;
+	width: 31%;
 	padding: 7px;
 	margin: 5px;
 	border: solid 1px white;
@@ -129,7 +119,7 @@ svg {
 	max-height: 250px;
 }
 
-#generatedContent {
+.generatedContent {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
@@ -165,6 +155,19 @@ svg {
 .visible {
 	visibility: visible;
 	transition: 0.7s;
-	transform: translateX(99px);
+	transform: translateX(111px);
 	opacity: 1;
+}
+
+@media (max-width: 1000px) {
+	.centralbox {
+		margin: 100px auto;
+		width: 100%;
+		font-size: 11px !important;
+	}
+}
+@media (max-width: 650px) {
+	.generatedBlocks {
+		width: 75%;
+	}
 }
