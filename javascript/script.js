@@ -1,7 +1,7 @@
 (function(global) {
 	const url =
 		"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&generator=search&pilimit=max&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrnamespace=0&gsrlimit=10&origin=*&gsrsearch=";
-	const pageIDurl = "https://en.wikipedia.org/?curid=";
+	const pageIdUrl = "https://en.wikipedia.org/?curid=";
 	const lookFor = document.querySelector("input[type=text]");
 	function moveOn() {
 		lookFor.classList.add("afterFocus");
@@ -15,14 +15,9 @@
 	}
 
 	function createBlock(semiIndex, semiTitle, semiEx) {
-		document.querySelector(".generatedContent").innerHTML +=
-			' <div class="generatedBlocks"><h1><a href="https://en.wikipedia.org/?curid=' +
-			semiIndex +
-			'">' +
-			semiTitle +
-			'</h1></a><p class="generatedText">' +
-			semiEx +
-			"</p></div>";
+		document.querySelector(
+			".generatedContent"
+		).innerHTML += `<div class="generatedBlocks"><h1><a href="${pageIdUrl} ${semiIndex}">${semiTitle}</h1></a><p class="generatedText">${semiEx}</p></div>`;
 	}
 
 	function wikiSearchTool(event) {
@@ -33,9 +28,9 @@
 				document.querySelector(".errorMsg").classList.remove("errorMsgDisplayed");
 				let arr = Object.keys(myJson.query.pages).map(key => myJson.query.pages[key]);
 				document.querySelector(".generatedContent").innerHTML = "";
-				arr.forEach(function(a) {
-					if (a.extract.length > 250) a.extract = a.extract.slice(0, 247) + "...";
-					createBlock(a.pageid, a.title, a.extract);
+				arr.forEach(function(el) {
+					if (el.extract.length > 250) el.extract = el.extract.slice(0, 247) + "...";
+					createBlock(el.pageid, el.title, el.extract);
 				});
 				document.querySelector(".centralbox").classList.add("loaded");
 			})
